@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff4d00</color>
+    <color name="colorPrimaryDark">#b688888a</color>
+    <color name="colorAccent">#ff4d00</color>
+
+    <color name="colorRed">#fa000b</color>
+    <color name="colorTextGray">#959595</color>
+    <color name="colorGray">#d4bfa8</color>
+    <color name="colorBambito">#81c243</color>
+    <color name="transparent_none">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white">#ebffffff</color>
+    <color name="colorYellow">#ffee00</color>
+    <color name="colorOrange">#ff6f00</color>
+    <color name="colorBacgroundRecicler">#adffedd1</color>
+    <color name="colorBacgroundReciclerGreen">#94ffffff</color>
+    <color name="colorBacgroundGray">#45bfbfbf</color>
+    <color name="colorBacgroundGrayLite">#3dededed</color>
+    <color name="colorBlack">#f3000000</color>
+    <color name="cardview_light_background">#FFFFFFFF</color>
+    <color name="Not_available">#aeafac</color>
+
+
+    <array name="colors">
+        <item name="all" type="color">#ff0202</item>
+        <item name="design" type="color">#ff9a02</item>
+        <item name="ios" type="color">#9acc02</item>
+        <item name="android" type="color">#359a67</item>
+        <item name="web" type="color">#35cccc</item>
+        <item name="business" type="color">#3567ff</item>
+        <item name="research" type="color">#810281</item>
+        <item name="sales" type="color">#268345</item>
+        <item name="quality" type="color">#5c5ca0</item>
+        <item name="customer" type="color">#ba4152</item>
+        <item name="other" type="color">#766b6b</item>
+    </array>
+
+</resources>
