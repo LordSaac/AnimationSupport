@@ -17,11 +17,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickButton (v: View){
+        // Add textView for effect vibrate
        AnimationTextView.animateVibrationTV(tv_hello,this)
     }
 
 
     fun clickButton2(v: View){
+        // Add view for effect out
        AnimationView.animationOut(content_view,this)
     }
 }
