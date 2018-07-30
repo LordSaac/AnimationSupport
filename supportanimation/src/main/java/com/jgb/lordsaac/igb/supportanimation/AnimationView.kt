@@ -48,7 +48,7 @@ class AnimationView{
             v.startAnimation(myAnim)
         }
 
-        fun animationViewGone(v: View, mContext:Context,isGone: Boolean){
+        fun animationViewOut(v: View, mContext:Context,isGone: Boolean){
             val fadeOutAndroidAnimation = AnimationUtils.loadAnimation(mContext,R.anim.anim_out)
 
             v.startAnimation(fadeOutAndroidAnimation)
@@ -59,8 +59,6 @@ class AnimationView{
                     .setListener(object : AnimatorListenerAdapter() {
                         override fun onAnimationEnd(animation: Animator) {
 
-                            if(isGone)
-                                v.visibility = View.GONE
                         }
                     })
         }

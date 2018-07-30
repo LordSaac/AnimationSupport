@@ -7,17 +7,16 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.widget.TextView
 
-
 /**
  * Created by jgutierrez on 3/19/2018.
  */
-class AnimationEditText {
+class AnimationTextView {
 
     companion object {
 
         private val vibrate: Int = R.anim.vibration_animation;
 
-        fun animateVibration(edt: EditText, context: Context){
+        fun animateVibrationET(edt: EditText, context: Context){
             val fadeOutAndroidAnimation = AnimationUtils.loadAnimation(context, vibrate)
 
             edt.startAnimation(fadeOutAndroidAnimation)
@@ -35,7 +34,7 @@ class AnimationEditText {
 
         }
 
-        fun animateVibrationText(edt: TextView, context: Context){
+        fun animateVibrationTV(edt: TextView, context: Context){
             val fadeOutAndroidAnimation = AnimationUtils.loadAnimation(context, vibrate)
 
             edt.startAnimation(fadeOutAndroidAnimation)
