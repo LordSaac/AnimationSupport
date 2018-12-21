@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     fun clickButton (v: View){
         // Add textView for effect vibrate
        AnimationTextView.animateVibrationTV(tv_hello,this)
+        AnimationTextView.animateVibrationTV(tv_hello2,this)
     }
 
 
