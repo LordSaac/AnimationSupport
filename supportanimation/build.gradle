@@ -26,13 +26,13 @@ android {
 
     // Kotlin JVM target configuration
     kotlinOptions {
-        jvmTarget = "1.8" // or "17" to match your Java version
+        jvmTarget = "11" // or "17" to match your Java version
     }
 
 // Java compile options
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
-        targetCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
+        sourceCompatibility = JavaVersion.VERSION_11 // or VERSION_17 to match your Kotlin version
+        targetCompatibility = JavaVersion.VERSION_11 // or VERSION_17 to match your Kotlin version
     }
 
 }
