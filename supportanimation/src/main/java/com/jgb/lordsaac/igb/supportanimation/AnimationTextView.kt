@@ -7,6 +7,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.widget.TextView
 
+
 /**
  * Created by jgutierrez on 3/19/2018.
  */

@@ -5,6 +5,7 @@ import android.view.animation.AnimationUtils
 import android.widget.Spinner
 
 
+
 /**
  * Created by jgutierrez on 3/19/2018.
  */

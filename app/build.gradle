@@ -1,33 +1,55 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 34
     defaultConfig {
         applicationId "com.jgb.lordsaac.igb.animationsupport"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    namespace 'com.jgb.lordsaac.igb.supportanimation'
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Kotlin JVM target configuration
+    kotlinOptions {
+        jvmTarget = "1.8" // or "17" to match your Java version
+    }
+
+// Java compile options
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
+        targetCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
+    }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.core:core:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    testImplementation 'junit:junit:4.13.2'
+
+    androidTestImplementation 'androidx.test:runner:1.5.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
     implementation project(':supportanimation')
 }

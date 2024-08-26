@@ -1,20 +1,21 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'maven-publish'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 34
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
 
     }
+
+    namespace 'com.jgb.lordsaac.igb.supportanimation'
 
     buildTypes {
         release {
@@ -23,34 +24,39 @@ android {
         }
     }
 
+    // Kotlin JVM target configuration
+    kotlinOptions {
+        jvmTarget = "1.8" // or "17" to match your Java version
+    }
+
+// Java compile options
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
+        targetCompatibility = JavaVersion.VERSION_1_8 // or VERSION_17 to match your Kotlin version
+    }
+
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'android.arch.work:work-runtime:1.0.0-alpha13'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-}
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-publish {
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.core:core:1.13.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    def groupProjectID = 'com.jgb.lordsaac.igb.animationsupport'
-    def artifactProjectID = 'supportanimation'
-    def publishVersionID = '0.0.4'
+    testImplementation 'junit:junit:4.13.2'
 
-    userOrg = 'linkinzel1'
-    repoName = 'Animation-Support'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'Animations basic for your project.'
-    website = 'https://github.com/LordSaac/AnimationSupport'
+    androidTestImplementation 'androidx.test:runner:1.5.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'androidx.work:work-runtime-ktx:2.9.1'
 
 }
 
 repositories {
     mavenCentral()
+    google()
+
 }
